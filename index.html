@@ -38,28 +38,54 @@
           <input type="records" class="form-control" id="role-input">
         </div>
         <div class="form-group">
-            <label for="start-year">Start Date:</label>
+            <label for="start-year">Start Date (MM/DD/YYYY):</label>
             <input type="start-year" class="form-control" id="date-input">
         </div>
         <div class="form-group">
             <label for="end-year">Monthly Rate:</label>
             <input type="end-year" class="form-control" id="rate-input">
         </div>
-        <button class="btn btn-default" id="submit" type="submit">Submit</button>
-    </form>
+        <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+      </form>
 </div>
 
 <!-- Second Form-->
 <div class = "card">
     <h2>Current Employees</h2>
-    <input type ="table">
+    <table id="table" class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">Months Worked</th>
+            <th scope="col">Monthly Rate ($)</th>
+            <th scope="col">Total Billed ($)</th>
+          </tr>
+        </thead>
+        <!-- <tbody>
+          <tr>
+            <td scope="row" class="name-display"></td>
+            <td class="role-display"></td>
+            <td class="date-display"></td>
+            <td class="work-display"></td>
+            <td class="rate-display"></td>
+            <td class="total-display"></td>
+          </tr>
+        </tbody> -->
+      </table>
+    </div>
+
+
+<!-- FireBase CDN-->
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
 
 <!-- jQuery CDN -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- FireBase CDN-->
-<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<!-- Our own JS stylesheet -->
 <script src="assets/javascript/timesheet.js"></script>
+
 <!-- Bootstrap CDN -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 

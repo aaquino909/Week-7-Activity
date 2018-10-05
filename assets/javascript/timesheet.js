@@ -1,6 +1,6 @@
-
-
-  // Initialize Firebase
+$(document).ready(function() {
+  
+// Initialize Firebase
   var config = {
     apiKey: "AIzaSyA1IPXna6a_8Mg3PUv8y5TIP78kyJNMwYc",
     authDomain: "timesheet-a521b.firebaseapp.com",
@@ -9,6 +9,7 @@
     storageBucket: "timesheet-a521b.appspot.com",
     messagingSenderId: "560500033479"
   };
+
   firebase.initializeApp(config);
   
   var database = firebase.database();
@@ -47,7 +48,7 @@
       database.ref().on("child_added", function(snapshot) {
         // storing the snapshot.val() in a variable for convenience
         var sv = snapshot.val();
-  
+        console.log(sv);
         // Console.loging the last user's data
         console.log(sv.name);
         console.log(sv.role);
@@ -55,15 +56,40 @@
         console.log(sv.rate);
   
         // Change the HTML to reflect
-        $("#name-display").text(sv.name);
-        $("#role-display").text(sv.role);
-        $("#date-display").text(sv.date);
-        $("#rate-display").text(sv.rate);
+        //assign a td to a variable//give it ID of namedisplay. append to table
+        var tbody = $("<tbody>");
+        tbody.addClass("tbody-display");
+        tbody.attr("value", sv.dateAdded);
+        $("#table").append(tbody);
+
+        var nameDisplay = $("<td>");
+        nameDisplay.addClass("name-display");
+        nameDisplay.text(sv.name);
+        $("#table").append(nameDisplay);
+        
+        var roleDisplay = $("<td>");
+        roleDisplay.addClass("role-display");
+        roleDisplay.text(sv.role);
+        $("#table").append(roleDisplay);
+        
+        
+        var dateDisplay = $("<td>");
+        dateDisplay.addClass("date-display");
+        dateDisplay.text(sv.date);
+        $("#table").append(dateDisplay);
+        
+        var rateDisplay = $("<td>");
+        rateDisplay.addClass("rate-display");
+        rateDisplay.text(sv.rate);
+        $("#table").append(rateDisplay);
+
+        // $("#name-display").text(sv.name);
+        // $("#role-display").text(sv.role);
+        // $("#date-display").text(sv.date);
+        // $("#rate-display").text(sv.rate);
   
         // Handle the errors
       }, function(errorObject) {
         console.log("Errors handled: " + errorObject.code);
       });
-  
-
-  
+});
