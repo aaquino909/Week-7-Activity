@@ -83,12 +83,8 @@ $(document).ready(function() {
         rateDisplay.text(sv.rate);
         $("#table").append(rateDisplay);
 
-
         // $("#name-display").text(sv.name);
         // $("#role-display").text(sv.role);
-
-
-
         // $("#date-display").text(sv.date);
         // $("#rate-display").text(sv.rate);
   
