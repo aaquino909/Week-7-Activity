@@ -38,7 +38,7 @@
           <input type="records" class="form-control" id="role-input">
         </div>
         <div class="form-group">
-            <label for="start-year">Start Date:</label>
+            <label for="start-year">Start Date (MM/DD/YYYY):</label>
             <input type="start-year" class="form-control" id="date-input">
         </div>
         <div class="form-group">
@@ -52,7 +52,7 @@
 <!-- Second Form-->
 <div class = "card">
     <h2>Current Employees</h2>
-    <table class="table table-striped">
+    <table id="table" class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Employee Name</th>
@@ -63,44 +63,29 @@
             <th scope="col">Total Billed ($)</th>
           </tr>
         </thead>
-        <tbody>
+        <!-- <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
+            <td scope="row" class="name-display"></td>
+            <td class="role-display"></td>
+            <td class="date-display"></td>
+            <td class="work-display"></td>
+            <td class="rate-display"></td>
+            <td class="total-display"></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@fat</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@twitter</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
+        </tbody> -->
       </table>
     </div>
 
-<!-- Our own JS stylesheet -->
-<script src="assets/javascript/timesheet.js"></script>
+
+<!-- FireBase CDN-->
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
 
 <!-- jQuery CDN -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- FireBase CDN-->
-<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<!-- Our own JS stylesheet -->
 <script src="assets/javascript/timesheet.js"></script>
+
 <!-- Bootstrap CDN -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
